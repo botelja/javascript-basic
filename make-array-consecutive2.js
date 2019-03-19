@@ -9,10 +9,14 @@
 
 function makeArrayConsecutive2(statues) {
     
-    let statuesSort = statues.sort();
+    let statuesSort = statues.sort(function(a,b){
+        return a -b;
+    });
     let min = statuesSort[0];
     let max = statuesSort[statuesSort.length - 1];
     let count = 0;
+
+    console.log(statuesSort);
 
     for(let i = min; i < max; i++) {
         if(statuesSort.indexOf(i) === -1) {
@@ -23,4 +27,5 @@ function makeArrayConsecutive2(statues) {
     return count;
 }
 
-console.log(makeArrayConsecutive2([6, 2, 3, 8]), 3); 
+
+console.log(makeArrayConsecutive2([4, 2, 7, 18]), 13); 
