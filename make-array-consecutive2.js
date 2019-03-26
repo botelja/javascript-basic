@@ -27,5 +27,4 @@ function makeArrayConsecutive2(statues) {
     return count;
 }
 
-
 console.log(makeArrayConsecutive2([4, 2, 7, 18]), 13); 
